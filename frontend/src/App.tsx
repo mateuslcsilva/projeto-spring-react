@@ -1,13 +1,29 @@
 import { useState } from 'react'
 import NotificationButton from './components/NotificationButton/index'
+import Header from './components/Header/index'
+import SalesCard from './components/SalesCard/index'
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <NotificationButton />
-    </div>
+    <>
+
+
+      <Header />
+
+      <main>
+        <section id="sales">
+          <div className="dsmeta-container">
+            <SalesCard />
+          </div>
+        </section>
+      </main>
+
+    </>
+
+
   )
 }
 
