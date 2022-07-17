@@ -14,10 +14,14 @@ const SalesCard = () => {
 
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/sales`)
+
+        let min = minDate.toISOString().slice(0, 10)
+        let max = maxDate.toISOString().slice(0, 10)
+        
+        axios.get(`${BASE_URL}/sales?minDate=${min}&maxDate=${max}`)
             .then(response => setSales(response.data.content))
         console.log(sales)
-    }, [])
+    }, [minDate, maxDate])
 
 
     return (
