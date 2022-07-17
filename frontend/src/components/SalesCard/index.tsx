@@ -1,8 +1,9 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import NotificationButton from '../NotificationButton'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import './styles.css'
+import axios from 'axios';
 
 const SalesCard = () => {
     const [minDate, setMinDate] = useState(new Date())
@@ -10,7 +11,10 @@ const SalesCard = () => {
 
     
 
-
+    useEffect(() => {
+        axios.get("http://localhost:8080/sales")
+        .then(response => console.log(response.data.content))
+    }, [])
 
 
     return (
