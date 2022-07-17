@@ -7,6 +7,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import './styles.css'
 import axios from 'axios';
 
+
 const SalesCard = () => {
     const [minDate, setMinDate] = useState(new Date())
     const [maxDate, setMaxDate] = useState(new Date())

@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import NotificationButton from './components/NotificationButton/index'
+import { ToastContainer } from 'react-toastify';
+import { Toast } from 'react-toastify/dist/components';
+import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/Header/index'
 import SalesCard from './components/SalesCard/index'
 
@@ -10,7 +12,7 @@ function App() {
   return (
     <>
 
-
+      <ToastContainer />
       <Header />
 
       <main>
